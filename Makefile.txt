@@ -1,0 +1,29 @@
+CXX = g++
+CXXFLAGS = -std=c++14 -fprofile-arcs -ftest-coverage -fPIC -O0
+LDFLAGS = -lgtest -lgtest_main -pthread
+INCLUDE = -I "C:\mingw64\googletest\googletest\include"
+LINK_LIB = -L "C:\mingw64\googletest\build\lib" 
+
+TEST_TARGET = calculator_test
+APP_TARGET = calculator_app
+TEST_SOURCES = calculator_test.cpp calculator.cpp
+APP_SOURCE = main.cpp
+
+
+Build:
+	$(CXX) $(CXXFLAGS) $(TEST_SOURCES) $(INCLUDE) $(LINK_LIB) $(LDFLAGS) -o $(TEST_TARGET)
+#	g++ -std=c++14 -fprofile-arcs -ftest-coverage -fPIC -O0 calculator_test.cpp calculator.cpp -I "C:\mingw64\googletest\googletest\include" -L "C:\mingw64\googletest\build\lib" -lgtest -lgtest_main -pthread -o calculator_test
+	$(CXX) $(APP_SOURCE) -o $(APP_TARGET)
+#	g++ main.cpp -o calculator_app
+
+Test:
+	calculator_test.exe
+	gcovr -r . --html --html-details -o coverage.html --exclude '.*test\.cpp$'
+	move *.html C:\Users\Admin\Desktop\Coverge_Report
+	move *.css C:\Users\Admin\Desktop\Coverge_Report
+
+Clean:
+	del *.gcno,*.gcda,*test.exe
+
+Deploy:
+	move calculator_app.exe C:\Users\Admin\Desktop\Destination
