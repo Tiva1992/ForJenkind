@@ -32,5 +32,5 @@ Deploy:
 	git add calculator_app.exe
 	git commit -m "deploy test"
 	git checkout app
-	git push -u origin app
+	git push origin app
 	move calculator_app.exe C:\Users\Admin\Desktop\Destination
