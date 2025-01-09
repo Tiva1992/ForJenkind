@@ -16,11 +16,11 @@ TEST_F(CalculatorTest, AdditionTest) {
 }
 
 // Test for subtraction
-// TEST_F(CalculatorTest, SubtractionTest) {
-    // EXPECT_EQ(calc.subtract(5, 3), 2);
-    // EXPECT_EQ(calc.subtract(-1, 1), -2);
-    // EXPECT_EQ(calc.subtract(0, 0), 0);
-// }
+TEST_F(CalculatorTest, SubtractionTest) {
+    EXPECT_EQ(calc.subtract(5, 3), 2);
+    EXPECT_EQ(calc.subtract(-1, 1), -2);
+    EXPECT_EQ(calc.subtract(0, 0), 0);
+}
 
 // Test for multiplication
 TEST_F(CalculatorTest, MultiplicationTest) {
