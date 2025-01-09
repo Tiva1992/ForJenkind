@@ -26,9 +26,4 @@ Clean:
 	del *.gcno,*.gcda,*test.exe
 
 Deploy:
-	git checkout app
-	git add calculator_app.exe
-	git commit -m "deploy test"
-	git checkout app
-	git push origin app
 	move calculator_app.exe C:\Users\Admin\Desktop\Destination
