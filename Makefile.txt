@@ -11,8 +11,6 @@ APP_SOURCE = main.cpp
 
 
 Build:
-	git checkout master
-	git pull
 	$(CXX) $(CXXFLAGS) $(TEST_SOURCES) $(INCLUDE) $(LINK_LIB) $(LDFLAGS) -o $(TEST_TARGET)
 #	g++ -std=c++14 -fprofile-arcs -ftest-coverage -fPIC -O0 calculator_test.cpp calculator.cpp -I "C:\mingw64\googletest\googletest\include" -L "C:\mingw64\googletest\build\lib" -lgtest -lgtest_main -pthread -o calculator_test
 	$(CXX) $(APP_SOURCE) -o $(APP_TARGET)
