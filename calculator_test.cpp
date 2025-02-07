@@ -14,7 +14,7 @@ TEST_F(CalculatorTest, AdditionTest) {
     EXPECT_EQ(calc.add(-1, 1), 0);
     EXPECT_EQ(calc.add(0, 0), 0);
 }
-
+//new comment
 // Test for subtraction
 //TEST_F(CalculatorTest, SubtractionTest) {
 //    EXPECT_EQ(calc.subtract(5, 3), 2);
